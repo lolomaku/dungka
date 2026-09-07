@@ -1,46 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Tumabi Ka D'yan - SB19 Anti-Crab Game">
+  <meta name="description" content="Dungka The Game by LOLOMAKU">
 
-  <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="tumabi_ka_dyan">
+  <meta name="apple-mobile-web-app-title" content="Dungka The Game">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>tumabi_ka_dyan</title>
+  <title>Dungka The Game</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    @font-face {
+      font-family: 'Bangers';
+      src: url('assets/font/bangers.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #000000;
+    }
+
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000000;
+      z-index: 9999;
+      transition: opacity 0.4s ease;
+    }
+
+    #splash.splash-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .splash-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      font-family: 'Bangers', sans-serif;
+      font-size: clamp(1rem, 10vw, 3rem);
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      opacity: 0;
+      white-space: nowrap;
+      animation:
+        splashTextReveal 1s ease-out 0.5s forwards,
+        splashTextColorShift 0.6s ease-in 2.2s forwards,
+        splashTextGlowPulse 1.8s ease-in-out 2.8s infinite;
+    }
+
+    .splash-image {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      z-index: 2;
+      width: 40vw;
+      max-width: 100px;
+      height: auto;
+      opacity: 0;
+      animation: splashImageRun 2.2s ease-in-out forwards;
+    }
+
+    @keyframes splashTextReveal {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes splashTextColorShift {
+      0% {
+        color: #ffffff;
+        text-shadow: none;
+      }
+      100% {
+        color: #ff1a1a;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+      }
+    }
+
+    @keyframes splashTextGlowPulse {
+      0%, 100% {
+        color: #ff1a1a;
+        text-shadow: 0 0 8px rgba(255, 0, 0, 0.7), 0 0 16px rgba(255, 0, 0, 0.5), 0 0 24px rgba(255, 0, 0, 0.3);
+      }
+      50% {
+        color: #ff4d4d;
+        text-shadow: 0 0 18px rgba(255, 0, 0, 1), 0 0 36px rgba(255, 0, 0, 0.8), 0 0 54px rgba(255, 0, 0, 0.5);
+      }
+    }
+
+    @keyframes splashImageRun {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(0);
+      }
+      15% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateX(0);
+      }
+      80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateX(150vw);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(170vw);
+      }
+    }
+  </style>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
+  <div id="splash">
+    <div class="splash-text">LOLOMAKU</div>
+    <img class="splash-image" src="assets/title/splash.png" alt="Dungka splash art">
+  </div>
 
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
   <script src="flutter_bootstrap.js" async></script>
+
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var splash = document.getElementById('splash');
+      if (splash) {
+        splash.classList.add('splash-hidden');
+        setTimeout(function () {
+          splash.remove();
+        }, 500);
+      }
+    });
+  </script>
 </body>
 </html>

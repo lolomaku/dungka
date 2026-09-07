@@ -1,11 +1,11 @@
 {
-    "name": "tumabi_ka_dyan",
-    "short_name": "tumabi_ka_dyan",
+    "name": "Dungka The Game",
+    "short_name": "Dungka",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#000000",
-    "description": "Tumabi Ka D'yan - SB19 Anti-Crab Game",
+    "description": "Dungka The Game by LOLOMAKU",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
