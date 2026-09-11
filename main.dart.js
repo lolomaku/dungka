@@ -89629,7 +89629,7 @@ case 5:case 3:return A.A(null,r)}})
 return A.B($async$oj,r)},
 GV(a,b){A.lu(a).nA(A.aA1(null,!1,!1,new A.a0m(b),B.bZ,B.bZ,new A.a0n(),t.z))},
 N(a){var s,r,q,p,o=this,n=null,m=t.p,l=A.dA(A.b([B.Y0,new A.rm(new A.a0o(a),n)],m),B.r,B.cH,B.C,0),k=A.fu(B.a7,2)
-k=A.cn(A.b([A.co(n,A.A9("assets/icon/icon.png",new A.a0p(),B.mV,!1,n,n),B.bw,n,n,new A.c6(B.cY,n,k,n,n,n,B.X),n,96,n,n,n,n,96),B.fC,B.XQ,B.Al,A.bP("v1.7.5",n,n,n,B.UM,n,n)],m),B.r,B.C)
+k=A.cn(A.b([A.co(n,A.A9("assets/icon/icon.png",new A.a0p(),B.mV,!1,n,n),B.bw,n,n,new A.c6(B.cY,n,k,n,n,n,B.X),n,96,n,n,n,n,96),B.fC,B.XQ,B.Al,A.bP("v1.7.6",n,n,n,B.UM,n,n)],m),B.r,B.C)
 s=A.fu(B.dD,1.5)
 s=A.dA(A.b([A.co(n,new A.d_(B.k5,A.A9("assets/icon/ediwow.png",new A.a0q(),B.C8,!1,n,n),n),B.bw,n,n,new A.c6(B.cY,n,s,n,n,n,B.X),n,56,n,n,n,n,56),B.iQ,A.n_(A.cn(A.b([B.XS,B.SS,B.XU,B.fE,A.bP("Unemployed and ready to code or draw for food (and rent).",n,n,n,A.xE().$3$color$fontSize$height(B.h8,12,1.3),n,n)],m),B.aK,B.C))],m),B.r,B.aq,B.C,0)
 r=A.b([B.a_p],m)
