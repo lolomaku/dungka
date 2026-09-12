@@ -27265,11 +27265,12 @@ if(q!=null)q.ip(l)}}a.rz$=A.b([],t.SO)
 s=a.Bk$
 if(s!=null&&(s.a&4)!==0)s.dR()
 a.Bk$=null},
-aRS(a,b){var s,r,q,p,o,n,m,l=null
+aRS(a,b){var s,r,q,p,o,n,m,l=null,k=!1
 if(!a.Ki$&&!a.vU$.p(0,B.df)){s=B.b.wg(B.i0,new A.aeH())
 r=s.f
 if(r!=null&&r.$2(a.vU$,a.jq$)){a.Ki$=!0
-A.aRQ(a,s)}}if(a.vS$){a.vX$+=b
+A.aRQ(a,s)
+k=!0}}if(a.vS$){a.vX$+=b
 for(;;){r=a.Bg$
 if(!(r>0&&a.vX$>=0.12))break
 a.vX$-=0.12
@@ -27307,7 +27308,8 @@ A.aS9(a)}if(a.pb$)if((a.Bc$+=b)>=0.39999999999999997){a.Bc$=0
 A.aS8(a)}if(a.pc$)if((a.Bd$+=b)>=0.4){a.Bd$=0
 A.aS7(a)}r=a.pd$
 if(r>0)r=a.pd$=r-b
-if((a.Bj$+=b)>=6&&!a.ng$&&!a.jZ$&&!a.B8$&&!a.pa$&&!a.pb$&&!a.pc$&&!a.lX$&&!a.p9$&&!a.rv$&&!a.Bi$&&r<=0&&J.rZ(a.gcG().eC(0,t.yn))){a.Bj$=0
+q=a.Bj$+=b
+if(!k&&q>=6&&!a.ng$&&!a.jZ$&&!a.B8$&&!a.pa$&&!a.pb$&&!a.pc$&&!a.lX$&&!a.p9$&&!a.rv$&&!a.Bi$&&r<=0&&J.rZ(a.gcG().eC(0,t.yn))){a.Bj$=0
 r=a.fB$
 p=A.aZL(r,a.vU$,a.jq$)
 q=a.vV$
